@@ -1,9 +1,6 @@
-//
-//  WeSplitApp.swift
-//  WeSplit
-//
-//  Created by Olivier Van hamme on 01/04/2022.
-//
+///  If you create something when the app launches
+///  and keep it alive the entire time,
+///  you’ll put it here.
 
 import SwiftUI
 
