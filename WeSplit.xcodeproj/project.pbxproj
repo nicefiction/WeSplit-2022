@@ -14,6 +14,7 @@
 		C56C43A027F74460001B3643 /* CreatingAForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56C439F27F74460001B3643 /* CreatingAForm.swift */; };
 		C56C43A227F74A08001B3643 /* AddingANavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56C43A127F74A08001B3643 /* AddingANavigationBar.swift */; };
 		C56C43A427F752D1001B3643 /* ModifyingProgramState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56C43A327F752D1001B3643 /* ModifyingProgramState.swift */; };
+		C56C43A627F7569C001B3643 /* BindingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56C43A527F7569C001B3643 /* BindingState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		C56C439F27F74460001B3643 /* CreatingAForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatingAForm.swift; sourceTree = "<group>"; };
 		C56C43A127F74A08001B3643 /* AddingANavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddingANavigationBar.swift; sourceTree = "<group>"; };
 		C56C43A327F752D1001B3643 /* ModifyingProgramState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyingProgramState.swift; sourceTree = "<group>"; };
+		C56C43A527F7569C001B3643 /* BindingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				C56C439F27F74460001B3643 /* CreatingAForm.swift */,
 				C56C43A127F74A08001B3643 /* AddingANavigationBar.swift */,
 				C56C43A327F752D1001B3643 /* ModifyingProgramState.swift */,
+				C56C43A527F7569C001B3643 /* BindingState.swift */,
 			);
 			path = "Day 16";
 			sourceTree = "<group>";
@@ -159,6 +162,7 @@
 				C56C43A027F74460001B3643 /* CreatingAForm.swift in Sources */,
 				C56C43A227F74A08001B3643 /* AddingANavigationBar.swift in Sources */,
 				C56C438F27F73566001B3643 /* WeSplitApp.swift in Sources */,
+				C56C43A627F7569C001B3643 /* BindingState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
