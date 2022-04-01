@@ -15,6 +15,7 @@
 		C56C43A227F74A08001B3643 /* AddingANavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56C43A127F74A08001B3643 /* AddingANavigationBar.swift */; };
 		C56C43A427F752D1001B3643 /* ModifyingProgramState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56C43A327F752D1001B3643 /* ModifyingProgramState.swift */; };
 		C56C43A627F7569C001B3643 /* BindingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56C43A527F7569C001B3643 /* BindingState.swift */; };
+		C56C43A827F75BFA001B3643 /* CreatingViewsInALoop.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56C43A727F75BFA001B3643 /* CreatingViewsInALoop.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		C56C43A127F74A08001B3643 /* AddingANavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddingANavigationBar.swift; sourceTree = "<group>"; };
 		C56C43A327F752D1001B3643 /* ModifyingProgramState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyingProgramState.swift; sourceTree = "<group>"; };
 		C56C43A527F7569C001B3643 /* BindingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingState.swift; sourceTree = "<group>"; };
+		C56C43A727F75BFA001B3643 /* CreatingViewsInALoop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatingViewsInALoop.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				C56C43A127F74A08001B3643 /* AddingANavigationBar.swift */,
 				C56C43A327F752D1001B3643 /* ModifyingProgramState.swift */,
 				C56C43A527F7569C001B3643 /* BindingState.swift */,
+				C56C43A727F75BFA001B3643 /* CreatingViewsInALoop.swift */,
 			);
 			path = "Day 16";
 			sourceTree = "<group>";
@@ -163,6 +166,7 @@
 				C56C43A227F74A08001B3643 /* AddingANavigationBar.swift in Sources */,
 				C56C438F27F73566001B3643 /* WeSplitApp.swift in Sources */,
 				C56C43A627F7569C001B3643 /* BindingState.swift in Sources */,
+				C56C43A827F75BFA001B3643 /* CreatingViewsInALoop.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
