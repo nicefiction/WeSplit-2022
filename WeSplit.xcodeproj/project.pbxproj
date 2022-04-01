@@ -12,6 +12,7 @@
 		C56C439327F73569001B3643 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C56C439227F73569001B3643 /* Assets.xcassets */; };
 		C56C439627F73569001B3643 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C56C439527F73569001B3643 /* Preview Assets.xcassets */; };
 		C56C43A027F74460001B3643 /* CreatingAForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56C439F27F74460001B3643 /* CreatingAForm.swift */; };
+		C56C43A227F74A08001B3643 /* AddingANavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56C43A127F74A08001B3643 /* AddingANavigationBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		C56C439227F73569001B3643 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C56C439527F73569001B3643 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C56C439F27F74460001B3643 /* CreatingAForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatingAForm.swift; sourceTree = "<group>"; };
+		C56C43A127F74A08001B3643 /* AddingANavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddingANavigationBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				C56C439F27F74460001B3643 /* CreatingAForm.swift */,
+				C56C43A127F74A08001B3643 /* AddingANavigationBar.swift */,
 			);
 			path = "Day 16";
 			sourceTree = "<group>";
@@ -150,6 +153,7 @@
 			files = (
 				C56C439127F73566001B3643 /* ContentView.swift in Sources */,
 				C56C43A027F74460001B3643 /* CreatingAForm.swift in Sources */,
+				C56C43A227F74A08001B3643 /* AddingANavigationBar.swift in Sources */,
 				C56C438F27F73566001B3643 /* WeSplitApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
