@@ -26,10 +26,10 @@ struct ContentView: View {
         
         NavigationView {
             Form {
-                Section {
+                Section("Start amount") {
                     TextField("Enter your amount:",
                               value: $checkAmount,
-                              format: .currency(code: Locale.current.currencyCode ?? "USD"))
+                              format: .currency(code: Locale.current.currencyCode ?? "EUR"))
                     .keyboardType(UIKeyboardType.decimalPad)
                     Picker("Divided by",
                            selection: $selectedNumberOfParticipants) {
@@ -39,8 +39,19 @@ struct ContentView: View {
                     }
                 }
                 Section {
+                    Picker("Select the tip percentage you want to give.",
+                           selection: $selectedTipPercentage) {
+                        ForEach(tipPercentages, id: \.self) {
+                            Text("\($0)")
+                        }
+                    }
+                           .pickerStyle(.segmented)
+                } header: {
+                    Text("Tip percentage")
+                }
+                Section {
                     Text(checkAmount,
-                         format: .currency(code: Locale.current.currencyCode ?? "USD"))
+                         format: .currency(code: Locale.current.currencyCode ?? "EUR"))
                 }
     //            Section {
     //                Text(Decimal.FormatStyle.Currency.FormatInput(amount),
