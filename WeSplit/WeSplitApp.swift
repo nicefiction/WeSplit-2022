@@ -4,12 +4,18 @@
 
 import SwiftUI
 
+
+
 @main
 struct WeSplitApp: App {
+    
+    // MARK: - Computed Properties:
+    
     var body: some Scene {
+        
         WindowGroup {
-            // ContentView()
-            CreatingViewsInALoop()
+            
+            ContentView()
         }
     }
 }
