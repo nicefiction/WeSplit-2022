@@ -7,7 +7,7 @@ struct ContentView: View {
     // MARK: - PROPERTY WRAPPERS
     
     @State private var checkAmount: Double = 0.00
-    @State private var selectedNumberOfParticipants: Int = 0
+    @State private var selectedNumberOfParticipants: Int = 2
     @State private var selectedTipPercentage: Int = 15
     
     
@@ -22,6 +22,16 @@ struct ContentView: View {
     
     // MARK: - Computed Properties
     
+    var calculatedAmount: Double {
+        
+        let numberOfParticipants: Double = Double(selectedNumberOfParticipants)
+        let tipAmount: Double = (checkAmount * (Double(selectedTipPercentage) / 100))
+        let grandTotal = (checkAmount + tipAmount) / numberOfParticipants
+        
+        return grandTotal
+    }
+    
+    
     var body: some View {
         
         NavigationView {
@@ -34,42 +44,33 @@ struct ContentView: View {
                     Picker("Divided by",
                            selection: $selectedNumberOfParticipants) {
                         ForEach(2..<10) {
-                            Text("\($0)")
+                            Text("\($0 - 2)")
                         }
                     }
                 }
                 Section {
                     Picker("Select the tip percentage you want to give.",
                            selection: $selectedTipPercentage) {
-                        ForEach(tipPercentages, id: \.self) {
-                            Text("\($0)")
+                        ForEach(tipPercentages,
+                                id: \.self) {
+                            Text($0, format: .percent)
                         }
                     }
-                           .pickerStyle(.segmented)
+                    .pickerStyle(.segmented)
                 } header: {
                     Text("Tip percentage")
                 }
                 Section {
-                    Text(checkAmount,
+                    Text(calculatedAmount,
                          format: .currency(code: Locale.current.currencyCode ?? "EUR"))
                 }
-    //            Section {
-    //                Text(Decimal.FormatStyle.Currency.FormatInput(amount),
-    //                     format: Decimal.FormatStyle.Currency.currency(code: Locale.current.currencyCode ?? "EUR"))
-    //            }
             }
             .navigationTitle("We Split")
         }
     }
 }
 
-/*
- Picker("Number of people", selection: $numberOfPeople) {
-         ForEach(2 ..< 100) {
-             Text("\($0) people")
-         }
-     }
- */
+
 
 
 
