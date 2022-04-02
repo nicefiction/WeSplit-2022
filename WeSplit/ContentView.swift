@@ -7,8 +7,10 @@ struct ContentView: View {
     // MARK: - PROPERTY WRAPPERS
     
     @State private var checkAmount: Double = 0.00
-    @State private var selectedNumberOfParticipants: Int = 2
+    @State private var selectedNumberOfParticipants: Int = 0
     @State private var selectedTipPercentage: Int = 15
+    /// `@FocusState` STEP 1
+    @FocusState private var checkAmountInputFieldIsActive: Bool
     
     
     
@@ -24,11 +26,16 @@ struct ContentView: View {
     
     var calculatedAmount: Double {
         
-        let numberOfParticipants: Double = Double(selectedNumberOfParticipants)
-        let tipAmount: Double = (checkAmount * (Double(selectedTipPercentage) / 100))
-        let grandTotal = (checkAmount + tipAmount) / numberOfParticipants
-        
-        return grandTotal
+        /// STEP 1
+        let numberOfParticipants: Double = Double(selectedNumberOfParticipants + 2)
+        /// STEP 2
+        let tipSelection: Double = Double(selectedTipPercentage) / 100
+        let tipAmount: Double = checkAmount * tipSelection
+        let grandTotal = checkAmount + tipAmount
+        /// STEP 3
+        let billPerParticipant = grandTotal / numberOfParticipants
+        /// STEP 4
+        return billPerParticipant
     }
     
     
@@ -41,10 +48,12 @@ struct ContentView: View {
                               value: $checkAmount,
                               format: .currency(code: Locale.current.currencyCode ?? "EUR"))
                     .keyboardType(UIKeyboardType.decimalPad)
+                    /// `@FocusState` STEP 2
+                    .focused($checkAmountInputFieldIsActive)
                     Picker("Divided by",
                            selection: $selectedNumberOfParticipants) {
                         ForEach(2..<10) {
-                            Text("\($0 - 2)")
+                            Text("\($0)")
                         }
                     }
                 }
@@ -66,6 +75,15 @@ struct ContentView: View {
                 }
             }
             .navigationTitle("We Split")
+            /// `@FocusState` STEP 3
+            .toolbar {
+                ToolbarItemGroup(placement: ToolbarItemPlacement.keyboard) {
+                    Spacer()
+                    Button("Done") {
+                        checkAmountInputFieldIsActive = false
+                    }
+                }
+            }
         }
     }
 }
