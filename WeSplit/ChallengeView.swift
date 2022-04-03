@@ -15,10 +15,13 @@ struct ChallengeView: View {
     @FocusState private var billAmountInputFieldIsSelected: Bool
     
     
+    
     // MARK: - Properties
     let tipPercentages: Array<Int> = [
         5, 10, 15, 20, 25
     ]
+    let currencyFormatter: FloatingPointFormatStyle<Double>.Currency = .currency(code: Locale.current.currencyCode ?? "EUR")
+    
     
     
     // MARK: - Computed Properties
@@ -64,7 +67,7 @@ struct ChallengeView: View {
                 Section(header: Text("bill")) {
                     TextField("Bill amount.",
                               value: $billAmount,
-                              format: .currency(code: Locale.current.currencyCode ?? "EUR"))
+                              format: currencyFormatter)
                     Picker("Number of participants:",
                            selection: $selectedNumberOfParticipants) {
                         ForEach(2..<10) {
@@ -90,12 +93,12 @@ struct ChallengeView: View {
                 
                 Section(header: Text("Total bill")) {
                     Text(calculatedTotalBillWithTipIncluded,
-                         format: .currency(code: Locale.current.currencyCode ?? "EUR"))
+                         format: currencyFormatter)
                 }
                 
                 Section {
                     Text(calculatedContribution,
-                         format: .currency(code: Locale.current.currencyCode ?? "EUR"))
+                         format: currencyFormatter)
                 } header: {
                     Text("Your contribution")
                 }
