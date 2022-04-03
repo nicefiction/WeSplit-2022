@@ -22,15 +22,38 @@ struct ChallengeView: View {
     
     
     // MARK: - Computed Properties
-    var calculatedContribution: Double {
+    var calculatedTipPercentage: Double {
         
         let tipPercentage: Double = Double(selectedTipPercentage) / 100
-        let tipAmount: Double = billAmount * tipPercentage
+        return tipPercentage
+    }
+    
+    
+    var calculatedNumberOfParticipants: Double {
         
         let numberOfParticipants: Double = Double(selectedNumberOfParticipants + 2)
-        let yourContribution: Double = (billAmount + tipAmount) / numberOfParticipants
+        return numberOfParticipants
+    }
+    
+    
+    var calculatedTipAmount: Double {
         
+        let tipAmount: Double = billAmount * calculatedTipPercentage
+        return tipAmount
+    }
+    
+    
+    var calculatedContribution: Double {
+        
+        let yourContribution: Double = (billAmount + calculatedTipAmount) / calculatedNumberOfParticipants
         return yourContribution
+    }
+    
+    
+    var calculatedTotalBillWithTipIncluded: Double {
+        
+        let totalBillWithTip: Double = billAmount + calculatedTipAmount
+        return totalBillWithTip
     }
     
     
@@ -60,6 +83,11 @@ struct ChallengeView: View {
                         }
                     }
                     .pickerStyle(.segmented)
+                }
+                
+                Section(header: Text("Total bill")) {
+                    Text(calculatedTotalBillWithTipIncluded,
+                         format: .currency(code: Locale.current.currencyCode ?? "EUR"))
                 }
                 
                 Section {
