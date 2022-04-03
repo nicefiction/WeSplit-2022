@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C50DE34627FA1AA40075F788 /* ChallengeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50DE34527FA1AA40075F788 /* ChallengeView.swift */; };
 		C56C438F27F73566001B3643 /* WeSplitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56C438E27F73566001B3643 /* WeSplitApp.swift */; };
 		C56C439127F73566001B3643 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56C439027F73566001B3643 /* ContentView.swift */; };
 		C56C439327F73569001B3643 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C56C439227F73569001B3643 /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C50DE34527FA1AA40075F788 /* ChallengeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeView.swift; sourceTree = "<group>"; };
 		C56C438B27F73566001B3643 /* WeSplit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeSplit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C56C438E27F73566001B3643 /* WeSplitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeSplitApp.swift; sourceTree = "<group>"; };
 		C56C439027F73566001B3643 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 				C56C439C27F743FA001B3643 /* Day 16 */,
 				C56C438E27F73566001B3643 /* WeSplitApp.swift */,
 				C56C439027F73566001B3643 /* ContentView.swift */,
+				C50DE34527FA1AA40075F788 /* ChallengeView.swift */,
 				C56C439227F73569001B3643 /* Assets.xcassets */,
 				C56C439427F73569001B3643 /* Preview Content */,
 			);
@@ -164,6 +167,7 @@
 				C56C43A427F752D1001B3643 /* ModifyingProgramState.swift in Sources */,
 				C56C43A027F74460001B3643 /* CreatingAForm.swift in Sources */,
 				C56C43A227F74A08001B3643 /* AddingANavigationBar.swift in Sources */,
+				C50DE34627FA1AA40075F788 /* ChallengeView.swift in Sources */,
 				C56C438F27F73566001B3643 /* WeSplitApp.swift in Sources */,
 				C56C43A627F7569C001B3643 /* BindingState.swift in Sources */,
 				C56C43A827F75BFA001B3643 /* CreatingViewsInALoop.swift in Sources */,

@@ -15,7 +15,8 @@ struct WeSplitApp: App {
         
         WindowGroup {
             
-            ContentView()
+            // ContentView()
+            ChallengeView()
         }
     }
 }
