@@ -65,7 +65,7 @@ struct ChallengeView: View {
                     TextField("Bill amount.",
                               value: $billAmount,
                               format: .currency(code: Locale.current.currencyCode ?? "EUR"))
-                    Picker("Number of participants.",
+                    Picker("Number of participants:",
                            selection: $selectedNumberOfParticipants) {
                         ForEach(2..<10) {
                             Text("\($0)")
@@ -75,14 +75,17 @@ struct ChallengeView: View {
                 .focused($billAmountInputFieldIsSelected)
                 
                 Section(header: Text("Tip percentage.")) {
-                    Picker("Select your tip percentage.",
+                    Picker("Select your tip percentage:",
                            selection: $selectedTipPercentage) {
-                        ForEach(tipPercentages,
-                                id: \.self) {
+//                        ForEach(tipPercentages,
+//                                id: \.self) {
+//                            Text("\($0)")
+//                        }
+                        ForEach(0..<101) {
                             Text("\($0)")
                         }
                     }
-                    .pickerStyle(.segmented)
+//                    .pickerStyle(.segmented)
                 }
                 
                 Section(header: Text("Total bill")) {
