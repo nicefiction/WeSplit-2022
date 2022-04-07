@@ -18,7 +18,7 @@ struct ChallengeView: View {
     
     // MARK: - Properties
     let tipPercentages: Array<Int> = [
-        5, 10, 15, 20, 25
+        0, 5, 10, 15, 20, 25
     ]
     let currencyFormatter: FloatingPointFormatStyle<Double>.Currency = .currency(code: Locale.current.currencyCode ?? "EUR")
     
@@ -94,6 +94,7 @@ struct ChallengeView: View {
                 Section(header: Text("Total bill")) {
                     Text(calculatedTotalBillWithTipIncluded,
                          format: currencyFormatter)
+                    .foregroundColor(selectedTipPercentage == 0 ? .red : .green)
                 }
                 
                 Section {
